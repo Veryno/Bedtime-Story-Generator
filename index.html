@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedtime Stories Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Do you want to hear a bedtime story?</h1>
+    <h2>Tell me what you want to hear about</h2>
+    <form action="/generate-story" method="post">
+        <label for="prompt">Enter your bedtime story prompt:</label><br>
+        <input type="text" id="prompt" name="prompt" required><br><br>
+        <input type="submit" value="Generate Story">
+    </form>
+
+    <div id="storyPopup" class="popup">
+        <div class="popup-content" id="storyPopupContent">
+            <h1>Your bedtime story is ready!</h1>
+            <p id="storyText"></p>
+            <a id="downloadLink" href="/download-story">Download the story</a>
+        </div>
+    </div>
+</body>
+</html>
